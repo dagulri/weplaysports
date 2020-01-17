@@ -121,15 +121,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles') #배포후
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR,'static')
-    #,'/var/www/static/',
+    os.path.join(BASE_DIR,'staticfiles')
 ]
-#배포전
-STATIC_ROOT = "/var/www/example.com/static/"
-#배포후
-#STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 # Activate Django-Heroku.
 # django_heroku.settings(locals())
