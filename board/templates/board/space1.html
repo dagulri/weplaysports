@@ -1,0 +1,124 @@
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="{% static "css/space.css" %}">
+    <script src="{% static "js/space.js" %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+        <div class="logo">We play sport</div>
+
+        <div class="timer">
+            <span id="min-decrease"onclick="minOneUp()"><i class="fas fa-angle-up"id="timectl1"></i></span>
+            <div class="min"id="idMin">10</div>
+            <span id="min-increase"onclick="minFiveUp()"><i class="fas fa-angle-double-up"id="timectl2"></i></span>
+            :
+            <span id="sec-decrease"onclick="secOneUp()"><i class="fas fa-angle-up"id="timectl3"></i></span>
+            <div class="sec"id="idSec">00</div>
+            <span id="sec-increase"onclick="secFiveUp()"><i class="fas fa-angle-double-up"id="timectl4"></i></span>
+
+
+            <div class="start"><i onclick="timeStart()" class="fas fa-play" aria-hidden="false"id="idPlay"></i></div>
+            <!--<i class="fas fa-pause"></i>-->
+            <div class="reset"onclick="timeReset()"><i class="fas fa-redo"></i></div>
+        </div>
+         <div class="set">
+             <a href="#"><i class="fas fa-cog"></i></a> <!--<i class="fas fa-tv"></i>-->
+             <a href="#"><i class="fas fa-power-off"onclick="winOff()"></i></a>
+            <!--<div class = "setting"> setting </div>
+            <div class = "power"> Power </div>-->
+         </div>
+    </div>
+
+    <div class="main-content">
+        <div class="homebar">
+           <div class="hometeambar">
+            <div class="hometeamcolor" id="idhometeamcolor" onclick="colorChange()">Team color</div>
+            <div class="hometeamname"  id="idhometeamname" onclick="nameChange()">Team name</div>
+          </div>
+          <div class="homepoint" id="idhomepoint" onclick="OneUpdScore()">00</div>
+          <div class="point">
+            <div class="point3" onclick="ThreeUpdScore()">+3</div>
+            <div class="point2" onclick="TwoUpdScore()">+2</div>
+            <div class="point-1" onclick="DownScore()">-1</div>
+          </div>
+        </div>
+        <div class="setbar">
+            <a><i class="fas fa-sync" id="sync" onclick="sync()"></i></a>
+            <a><i class="fas fa-exchange-alt" id="exchange" onclick="exchange()"></i></a>
+        </div>
+        <div class="awaybar">
+           <div class="awayteambar">
+            <div class="awayteamcolor" id="idawayteamcolor" onclick="awaycolorChange()">Team color</div>
+            <div class="awayteamname" id="idawayteamname" onclick="awaynameChange()">Team name</div>
+          </div>
+          <div class="awaypoint" id="idawaypoint" onclick="AwayOneUpdScore()">
+            00
+          </div>
+          <div class="point">
+            <div class="point3" onclick="AwayThreeUpdScore()">+3</div>
+            <div class="point2" onclick="AwayTwoUpdScore()">+2</div>
+            <div class="point-1" onclick="DownAwayScore()">-1</div>
+          </div>
+        </div>
+
+        <div class="sidebar">
+          <div class="icon">
+            <a href="#"><i class="fas fa-volume-up"></i></a> <!-- <a href="#"><i class="fas fa-volume-mute"></i></a> -->
+          </div>
+          <div class="whatsound">
+            <div class="property" onclick="PlaySoundTime()">Time</div>
+
+            <div class="property" onclick="PlaySoundScore()">Score</div>
+
+            <div class="property" onclick="PlaySoundFoul()">Foul</div>
+            <audio id="audioFoul" src="{% static "media/faul.m4a" %}"> </audio>
+            <div class="property" onclick="PlaySoundStart()">Start/End</div>
+            <audio id="audioStart" src="{% static "media/end.m4a" %}"></audio>
+          </div>
+        </div>
+    </div>
+<script>
+var voice = "US English";
+var txtInputHp = document.getElementById("idhomepoint");
+var txtInputAp = document.getElementById("idawaypoint");
+var txtInputMin = document.getElementById("idMin");
+var txtInputSec = document.getElementById("idSec");
+
+
+function PlaySoundTime() {
+  speechTime = new SpeechSynthesisUtterance(txtInputMin.innerHTML + "minutes"  + txtInputSec.innerHTML + "second");
+  console.log(speechTime);
+  speechTime.voice = speechSynthesis.getVoices()[parseInt(voice.value)];
+  speechSynthesis.speak(speechTime);
+}
+
+function PlaySoundScore() {
+  speechScore = new SpeechSynthesisUtterance(txtInputHp.innerHTML + ":"  + txtInputAp.innerHTML);
+  console.log(speechScore);
+  speechScore.voice = speechSynthesis.getVoices()[parseInt(voice.value)];
+  speechSynthesis.speak(speechScore);
+}
+</script>
+
+</body>
+
+
+
+
+    <div class="footer">
+
+    </div>
+
+
+
+
+</html>

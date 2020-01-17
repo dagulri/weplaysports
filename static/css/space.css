@@ -1,0 +1,511 @@
+/* 포인트 완성 하기 -> away bar 완성하기 */
+
+div{
+  box-sizing: border-box
+}
+
+body {
+  margin: 0px;
+	padding: 0px;
+  height: 100%;
+  background: #6a7069;
+  font-family: 'Odibee Sans', cursive;
+  font-size: 50px;
+}
+
+
+.header{
+    min-height: 100px;
+    color:#ffffff;
+    width:100%;
+    margin-top:4px;
+    margin-bottom:4px;
+    text-align: center;
+}
+
+
+.logo{
+    min-height: 100px;
+    background-color: #000000;
+    width: calc(20% - 2px);
+    font-size: 35px;
+    color: white;
+    float:left;
+    text-align: center;
+    margin-right:2px;
+    line-height: 100px; /* div안 높이 조정을 통한 test 높이 조정 */
+}
+
+/* 타이머 css 들 */
+.timer{
+    min-height: 100px;
+    background-color: #000000;
+    width: calc(60% - 2px);
+    margin-right:2px;
+    margin-bottom:2px;
+    font-size: 90px;
+    color: fff;
+    float:left;
+    text-align: center;
+}
+
+.timer i{
+  padding-top: 23px;
+  vertical-align: top;
+  font-size: 50px;
+}
+
+.timer i:hover{
+  color: #7d7d7d;
+}
+
+
+.min {
+    display: inline-block;
+}
+.sec {
+    display: inline-block;
+}
+
+.timer .start{
+    display: inline-block;
+    color: white;
+    font-size: 50px;
+    padding-left: 30px;
+    vertical-align: top;
+  }
+
+.timer .reset{
+    display: inline-block;
+    color: white;
+    font-size: 50px;
+    vertical-align: top;
+    padding-left: 15px;
+}
+.timer .start:hover{
+  color: #7d7d7d;
+}
+.timer .reset:hover{
+  color: #7d7d7d;
+}
+
+.set{
+    min-height: 100px;
+    width: calc(20%);
+    float: left;
+    overflow: auto;
+    display: inline-block;
+}
+
+.set a{
+    float: left;
+    min-height: calc(100px - 23px);
+    transition: all 0.3s ease;
+    width: calc(50% - 1px);
+    padding-top: 23px;
+    color: white;
+    font-size: 50px;
+    margin-right: 1px;
+    background-color: black;
+    text-align: center;
+}
+
+.set a:hover {
+  background-color: #878787
+}
+
+
+.main-content .homebar{
+    min-height: 400px;
+    width: calc(32.5% - 2px);
+    float: left;
+    text-align: center;
+    color:#ffffff;
+    margin-right:2px;
+    position: relative;
+    float: left;
+}
+
+.main-content .homebar .hometeambar .hometeamcolor{
+    min-height: 50px;
+    background-color: red;
+    width: 50%;
+    float: left;
+    font-size: 40px;
+    padding-top: 4px;
+    margin-bottom: 2px;
+}
+.main-content .homebar .hometeambar .hometeamcolor:hover{
+  opacity: 0.5;
+}
+
+.main-content .homebar .hometeambar .hometeamname{
+    min-height: 50px;
+    background-color: black;
+    width: 50%;
+    float: left;
+    font-size: 40px;
+    padding-top: 4px;
+    margin-bottom: 2px;
+}
+.main-content .homebar .hometeambar .hometeamname:hover{
+  opacity: 0.5;
+}
+
+.main-content .homebar .homepoint{
+    height: 350px;
+    background-color: black;
+    width: calc(80% - 2px);
+    float: left;
+    text-align: center;
+    color:#ffffff;
+    margin-right: 2px;
+    /*argin-bottom: 50px;*/
+    position: relative;
+    font-size: 300px;
+    padding-top: 50px;
+    opacity: 1.0;
+}
+
+.main-content .homebar .homepoint:hover {
+  opacity: 0.5;
+}
+
+
+
+.main-content .homebar .point{
+    min-height: 350px;
+    width: calc(20%);
+    float: right;
+    font-size: 60px;
+    margin-bottom:2px;
+}
+
+.main-content .homebar .point .point3{
+    color: white;
+    background-color: black;
+    min-height:calc(350px/3 - 0px);
+    margin-bottom:2px;
+    padding-top: 25px;
+}
+.main-content .homebar .point .point3:hover{
+    opacity: 0.5;
+}
+
+.main-content .homebar .point .point2{
+    color: white;
+    background-color: black;
+    min-height:calc(350px/3 - 2px);
+    margin-bottom:2px;
+    padding-top: 25px;
+}
+.main-content .homebar .point .point2:hover{
+    opacity: 0.5;
+}
+
+.main-content .homebar .point .point-1{
+    color: white;
+    background-color: black;
+    min-height:calc(350px/3 - 2px);
+    padding-top: 25px;
+}
+.main-content .homebar .point .point-1:hover{
+    opacity: 0.5;
+}
+
+
+/* set 바 */
+.main-content .setbar{
+  min-height: 400px;
+  width:calc(10% - 2px);
+  float: left;
+  margin-right:2px;
+  display: block;
+}
+.setbar a{
+  display: block;
+  text-align: center;
+  min-height: calc(200px - 70px);
+  transition: all 0.3s ease;
+  width: 100%;
+  color: white;
+  font-size: 60px;
+  margin-bottom: 2px;
+  background-color: black;
+  padding-top: 70px;
+}
+.setbar a:hover{
+  background-color: #555;
+}
+
+/*away team*/
+
+/* homebar와 동일 */
+
+.main-content .awaybar{
+    min-height: 400px;
+    width: calc(32.5% - 2px);
+    float: left;
+    text-align: center;
+    color:#ffffff;
+    margin-right: 2px;
+    position: relative;
+    float: left;
+}
+
+.main-content .awaybar .awayteambar .awayteamcolor{
+    min-height: 50px;
+    background-color: red;
+    width: 50%;
+    float: left;
+    font-size: 40px;
+    padding-top: 4px;
+    margin-bottom: 2px;
+}
+.main-content .awaybar .awayteambar .awayteamcolor:hover{
+  opacity: 0.5;
+}
+
+.main-content .awaybar .awayteambar .awayteamname{
+    min-height: 50px;
+    background-color: black;
+    width: 50%;
+    float: left;
+    font-size: 40px;
+    padding-top: 4px;
+    margin-bottom: 2px;
+}
+.main-content .awaybar .awayteambar .awayteamname:hover{
+  opacity: 0.5;
+}
+
+.main-content .awaybar .awaypoint{
+    height: 350px;
+    background-color: black;
+    width: calc(80% - 2px);
+    text-align: center;
+    color:#ffffff;
+    margin-right: 2px;
+    /*argin-bottom: 50px;*/
+    position: relative;
+    float: left;
+    font-size: 300px;
+    padding-top: 50px;
+    opacity: 1.0;
+}
+
+.main-content .awaybar .awaypoint:hover {
+  opacity: 0.5;
+}
+
+
+
+.main-content .awaybar .point{
+    min-height: 350px;
+    width: calc(20%);
+    float: right;
+    font-size: 60px;
+    margin-bottom:2px;
+}
+
+.main-content .awaybar .point .point3{
+    color: white;
+    background-color: black;
+    min-height:calc(350px/3 - 0px);
+    margin-bottom:2px;
+    padding-top: 25px;
+}
+.main-content .awaybar .point .point3:hover{
+    opacity: 0.5;
+}
+
+.main-content .awaybar .point .point2{
+    color: white;
+    background-color: black;
+    min-height:calc(350px/3 - 2px);
+    margin-bottom:2px;
+    padding-top: 25px;
+}
+.main-content .awaybar .point .point2:hover{
+    opacity: 0.5;
+}
+
+.main-content .awaybar .point .point-1{
+    color: white;
+    background-color: black;
+    min-height:calc(350px/3 - 2px);
+    padding-top: 25px;
+}
+.main-content .awaybar .point .point-1:hover{
+    opacity: 0.5;
+}
+
+/* sidebar */
+
+.sidebar{
+  min-height: 400px;
+  width:25%;
+  float: left;
+}
+
+.sidebar .icon{
+  min-height: 402px;
+  width: 30%;
+  float: left;
+  background-color: black;
+  text-align: center;
+  font-size: 50px;
+  padding-top: 175px;
+}
+
+.sidebar .icon a{
+  color: white;
+}
+.sidebar .icon a:hover{
+  color: #555;
+}
+
+
+.sidebar .whatsound{
+  min-height: 400px;
+  width:70%;
+  float: left;
+  text-align: center;
+  font-size: 50px;
+  display: inline-block;
+}
+
+.sidebar .whatsound .property{
+   display: block;
+   text-align: center;
+   min-height:calc(404px/4 - 2px);
+   width: clac(100% -1px);
+   color: white;
+   font-size: 40px;
+   margin-left: 1px;
+   margin-bottom: 2px;
+   background-color: black;
+   padding-top: 30px;
+}
+
+.sidebar .whatsound .property:hover{
+  opacity:0.5;
+}
+
+
+
+/*
+.sidebar a{
+    display: block;
+    text-align: center;
+    height: 74px;
+    width: 100%;
+    color: white;
+    font-size: 40px;
+    margin-top: 1px;
+    background-color: black;
+    padding-top: 25px;
+}
+
+.sidebar a:hover {
+  background-color: #555;
+}
+*/
+
+/*footer */
+
+.footer{
+	min-height: 100px;
+	background-color: black;
+	width:100%;
+	float: left;
+	text-align: center;
+	color:#ffffff;
+	padding: 15px;
+}
+
+
+/*
+.top > div {
+    display: inline-block;
+}
+*/
+/*
+.top .timer {
+    width: 35%;
+    font-size: 120px;
+    color: black;
+    float:left;
+    text-align : center;
+}
+.top .timer .min {
+    display: inline-block;
+}
+.top .timer .sec {
+    display: inline-block;
+}
+*/
+/*
+button {
+    width: 55px;
+    height: 55px;
+    margin: 0.1%;
+}
+
+.timer-button {
+    font-size: 50px;
+}
+
+.bottom {
+    width: 100%;
+    height:60%;
+    border: 0.4em inset #009688;
+}
+
+.bottom > div {
+    display: inline-block;
+}
+
+
+.timer-button {
+    float: right;
+    margin : 0%;
+    color : red;
+}
+
+.timer .button {
+    float: right;
+    margin : 0%;
+}
+*/
+/* bottom */
+
+
+/*홈팀 스코아 */
+/*
+.bottom .home-score {
+    width: 30%;
+    color: red;
+}
+
+.bottom .home-score .score {
+    font-size: 120px;
+}
+
+.bottom .away-score {
+    width: 30%;
+    color: red;
+}
+.bottom .away-score .score {
+    font-size: 120px;
+}
+.top .home-poul .count {
+    font-size: 60px;
+}
+.top .away-poul .count {
+    font-size: 60px;
+}
+.shot-clock .sec {
+    font-size: 60px;
+}
+*/
