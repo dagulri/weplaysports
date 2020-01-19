@@ -108,7 +108,7 @@ function PlaySoundTime() {
 function PlaySoundScore() {
   speechScore = new SpeechSynthesisUtterance(txtInputHp.innerHTML + " to "  + txtInputAp.innerHTML);
   console.log(speechScore);
-  speechScore.voice = speechSynthesis.getVoices()[parseInt(voice.value)];
+  /*speechScore.voice = speechSynthesis.getVoices()[parseInt(voice.value)];*/
   speechSynthesis.speak(speechScore);
 }
 </script>
