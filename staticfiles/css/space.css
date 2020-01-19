@@ -1,6 +1,6 @@
 /* 포인트 완성 하기 -> away bar 완성하기 */
 
-@media only screen and (orientation:portrait){
+@media only screen and (orientation:landscape){
   body {
     height: 100vw;
     transform: rotate(90deg);
@@ -14,7 +14,7 @@ div{
 
 body {
   margin: 0px;
-	padding: 0px;
+  padding: 0px;
   height: 100%;
   background: #6a7069;
   font-family: 'Odibee Sans', cursive;
