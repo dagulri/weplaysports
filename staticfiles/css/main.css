@@ -1,5 +1,13 @@
 /* title  */
 @import url(https://fonts.googleapis.com/css?family=Anton);
+
+@media only screen and (orientation:portrait){
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+}
+
 body {
   background: #000;
   font-family: "Anton";

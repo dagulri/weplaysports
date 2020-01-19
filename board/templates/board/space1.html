@@ -1,5 +1,3 @@
-{% load static %}
-
 <html lang="en">
 
 <head>
@@ -15,7 +13,7 @@
 
 <body>
 
-        <div class="logo">We play sport</div>
+  <div class="logo">We play sports</div>
 
         <div class="timer">
             <span id="min-decrease"onclick="minOneUp()"><i class="fas fa-angle-up"id="timectl1"></i></span>
@@ -95,15 +93,18 @@ var txtInputMin = document.getElementById("idMin");
 var txtInputSec = document.getElementById("idSec");
 
 
+
 function PlaySoundTime() {
   speechTime = new SpeechSynthesisUtterance(txtInputMin.innerHTML + "minutes"  + txtInputSec.innerHTML + "second");
+  /*speechTime.lang = "kr-KO"
+  speechTime.Voice = "Alice" */
   console.log(speechTime);
-  speechTime.voice = speechSynthesis.getVoices()[parseInt(voice.value)];
+  /*speechTime.voice = speechSynthesis.getVoices()[parseInt(voice.value)];*/
   speechSynthesis.speak(speechTime);
 }
 
 function PlaySoundScore() {
-  speechScore = new SpeechSynthesisUtterance(txtInputHp.innerHTML + ":"  + txtInputAp.innerHTML);
+  speechScore = new SpeechSynthesisUtterance(txtInputHp.innerHTML + " to "  + txtInputAp.innerHTML);
   console.log(speechScore);
   speechScore.voice = speechSynthesis.getVoices()[parseInt(voice.value)];
   speechSynthesis.speak(speechScore);
@@ -113,13 +114,8 @@ function PlaySoundScore() {
 </body>
 
 
-
-
     <div class="footer">
 
     </div>
-
-
-
 
 </html>

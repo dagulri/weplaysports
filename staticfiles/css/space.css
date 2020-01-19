@@ -1,8 +1,12 @@
 /* 포인트 완성 하기 -> away bar 완성하기 */
 
-@viewport {
-   orientation: portrait;
- }
+@media only screen and (orientation:portrait){
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+}
+
 
 div{
   box-sizing: border-box
