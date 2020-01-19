@@ -1,5 +1,9 @@
 /* 포인트 완성 하기 -> away bar 완성하기 */
 
+@viewport {
+   orientation: portrait;
+ }
+
 div{
   box-sizing: border-box
 }
@@ -15,7 +19,7 @@ body {
 
 
 .header{
-    min-height: 100px;
+    min-height: 80px;
     color:#ffffff;
     width:100%;
     margin-top:4px;
@@ -25,34 +29,34 @@ body {
 
 
 .logo{
-    min-height: 100px;
+    min-height: 10px;
     background-color: #000000;
     width: calc(20% - 2px);
-    font-size: 35px;
+    font-size: 30px;
     color: white;
     float:left;
     text-align: center;
     margin-right:2px;
-    line-height: 100px; /* div안 높이 조정을 통한 test 높이 조정 */
+    line-height: 80px; /* div안 높이 조정을 통한 test 높이 조정 */
 }
 
 /* 타이머 css 들 */
 .timer{
-    min-height: 100px;
+    min-height: 80px;
     background-color: #000000;
     width: calc(60% - 2px);
     margin-right:2px;
     margin-bottom:2px;
-    font-size: 90px;
-    color: fff;
+    font-size: 70px;
+    color: white;;
     float:left;
     text-align: center;
 }
 
 .timer i{
-  padding-top: 23px;
-  vertical-align: top;
-  font-size: 50px;
+  padding-top: 0px;
+  vertical-align: middle;
+  font-size: 30px;
 }
 
 .timer i:hover{
@@ -70,16 +74,12 @@ body {
 .timer .start{
     display: inline-block;
     color: white;
-    font-size: 50px;
     padding-left: 30px;
-    vertical-align: top;
   }
 
 .timer .reset{
     display: inline-block;
     color: white;
-    font-size: 50px;
-    vertical-align: top;
     padding-left: 15px;
 }
 .timer .start:hover{
@@ -90,7 +90,7 @@ body {
 }
 
 .set{
-    min-height: 100px;
+    min-height: 80px;
     width: calc(20%);
     float: left;
     overflow: auto;
@@ -99,12 +99,12 @@ body {
 
 .set a{
     float: left;
-    min-height: calc(100px - 23px);
+    min-height: calc(80px - 23px);
     transition: all 0.3s ease;
     width: calc(50% - 1px);
     padding-top: 23px;
     color: white;
-    font-size: 50px;
+    font-size: 30px;
     margin-right: 1px;
     background-color: black;
     text-align: center;
@@ -116,22 +116,21 @@ body {
 
 
 .main-content .homebar{
-    min-height: 400px;
-    width: calc(32.5% - 2px);
+    width: calc(35% - 2px);
     float: left;
     text-align: center;
-    color:#ffffff;
+    color: #ffffff;
     margin-right:2px;
     position: relative;
     float: left;
 }
 
 .main-content .homebar .hometeambar .hometeamcolor{
-    min-height: 50px;
+    min-height: 30px;
     background-color: red;
     width: 50%;
     float: left;
-    font-size: 40px;
+    font-size: 30px;
     padding-top: 4px;
     margin-bottom: 2px;
 }
@@ -140,11 +139,11 @@ body {
 }
 
 .main-content .homebar .hometeambar .hometeamname{
-    min-height: 50px;
+    min-height: 30px;
     background-color: black;
     width: 50%;
     float: left;
-    font-size: 40px;
+    font-size: 30px;
     padding-top: 4px;
     margin-bottom: 2px;
 }
@@ -153,7 +152,7 @@ body {
 }
 
 .main-content .homebar .homepoint{
-    height: 350px;
+    height: 201px;
     background-color: black;
     width: calc(80% - 2px);
     float: left;
@@ -162,8 +161,8 @@ body {
     margin-right: 2px;
     /*argin-bottom: 50px;*/
     position: relative;
-    font-size: 300px;
-    padding-top: 50px;
+    font-size: 180px;
+    padding-top: 20px;
     opacity: 1.0;
 }
 
@@ -174,19 +173,19 @@ body {
 
 
 .main-content .homebar .point{
-    min-height: 350px;
+    min-height: 201px;
     width: calc(20%);
     float: right;
-    font-size: 60px;
+    font-size: 40px;
     margin-bottom:2px;
 }
 
 .main-content .homebar .point .point3{
     color: white;
     background-color: black;
-    min-height:calc(350px/3 - 0px);
+    min-height:calc(201px/3 - 0px);
     margin-bottom:2px;
-    padding-top: 25px;
+    padding-top: 10px;
 }
 .main-content .homebar .point .point3:hover{
     opacity: 0.5;
@@ -195,9 +194,9 @@ body {
 .main-content .homebar .point .point2{
     color: white;
     background-color: black;
-    min-height:calc(350px/3 - 2px);
+    min-height:calc(201px/3 - 2px);
     margin-bottom:2px;
-    padding-top: 25px;
+    padding-top: 10px;
 }
 .main-content .homebar .point .point2:hover{
     opacity: 0.5;
@@ -206,8 +205,8 @@ body {
 .main-content .homebar .point .point-1{
     color: white;
     background-color: black;
-    min-height:calc(350px/3 - 2px);
-    padding-top: 25px;
+    min-height:calc(201px/3 - 2px);
+    padding-top: 10px;
 }
 .main-content .homebar .point .point-1:hover{
     opacity: 0.5;
@@ -216,8 +215,8 @@ body {
 
 /* set 바 */
 .main-content .setbar{
-  min-height: 400px;
-  width:calc(10% - 2px);
+  min-height: 90px;
+  width:calc(5% - 2px);
   float: left;
   margin-right:2px;
   display: block;
@@ -225,14 +224,15 @@ body {
 .setbar a{
   display: block;
   text-align: center;
-  min-height: calc(200px - 70px);
+  min-height: calc(125px - 56px);
   transition: all 0.3s ease;
   width: 100%;
+  padding-top: 50px;
   color: white;
-  font-size: 60px;
+  font-size: 30px;
   margin-bottom: 2px;
   background-color: black;
-  padding-top: 70px;
+
 }
 .setbar a:hover{
   background-color: #555;
@@ -243,8 +243,7 @@ body {
 /* homebar와 동일 */
 
 .main-content .awaybar{
-    min-height: 400px;
-    width: calc(32.5% - 2px);
+    width: calc(35% - 2px);
     float: left;
     text-align: center;
     color:#ffffff;
@@ -254,11 +253,11 @@ body {
 }
 
 .main-content .awaybar .awayteambar .awayteamcolor{
-    min-height: 50px;
-    background-color: red;
+    min-height: 30px;
+    background-color: blue;
     width: 50%;
     float: left;
-    font-size: 40px;
+    font-size: 30px;
     padding-top: 4px;
     margin-bottom: 2px;
 }
@@ -267,11 +266,11 @@ body {
 }
 
 .main-content .awaybar .awayteambar .awayteamname{
-    min-height: 50px;
+    min-height: 30px;
     background-color: black;
     width: 50%;
     float: left;
-    font-size: 40px;
+    font-size: 30px;
     padding-top: 4px;
     margin-bottom: 2px;
 }
@@ -280,7 +279,7 @@ body {
 }
 
 .main-content .awaybar .awaypoint{
-    height: 350px;
+    height: 201px;
     background-color: black;
     width: calc(80% - 2px);
     text-align: center;
@@ -289,8 +288,8 @@ body {
     /*argin-bottom: 50px;*/
     position: relative;
     float: left;
-    font-size: 300px;
-    padding-top: 50px;
+    font-size: 180px;
+    padding-top: 20px;
     opacity: 1.0;
 }
 
@@ -301,19 +300,19 @@ body {
 
 
 .main-content .awaybar .point{
-    min-height: 350px;
+    min-height: 201px;
     width: calc(20%);
     float: right;
-    font-size: 60px;
+    font-size: 40px;
     margin-bottom:2px;
 }
 
 .main-content .awaybar .point .point3{
     color: white;
     background-color: black;
-    min-height:calc(350px/3 - 0px);
+    min-height:calc(201px/3 - 0px);
     margin-bottom:2px;
-    padding-top: 25px;
+    padding-top: 10px;
 }
 .main-content .awaybar .point .point3:hover{
     opacity: 0.5;
@@ -322,9 +321,9 @@ body {
 .main-content .awaybar .point .point2{
     color: white;
     background-color: black;
-    min-height:calc(350px/3 - 2px);
+    min-height:calc(201px/3 - 2px);
     margin-bottom:2px;
-    padding-top: 25px;
+    padding-top: 10px;
 }
 .main-content .awaybar .point .point2:hover{
     opacity: 0.5;
@@ -333,8 +332,8 @@ body {
 .main-content .awaybar .point .point-1{
     color: white;
     background-color: black;
-    min-height:calc(350px/3 - 2px);
-    padding-top: 25px;
+    min-height:calc(201px/3 - 2px);
+    padding-top: 10px;
 }
 .main-content .awaybar .point .point-1:hover{
     opacity: 0.5;
@@ -343,19 +342,18 @@ body {
 /* sidebar */
 
 .sidebar{
-  min-height: 400px;
   width:25%;
   float: left;
 }
 
 .sidebar .icon{
-  min-height: 402px;
+  min-height: 240px;
   width: 30%;
   float: left;
   background-color: black;
   text-align: center;
-  font-size: 50px;
-  padding-top: 175px;
+  font-size: 30px;
+  padding-top: 110px;
 }
 
 .sidebar .icon a{
@@ -367,7 +365,6 @@ body {
 
 
 .sidebar .whatsound{
-  min-height: 400px;
   width:70%;
   float: left;
   text-align: center;
@@ -378,14 +375,14 @@ body {
 .sidebar .whatsound .property{
    display: block;
    text-align: center;
-   min-height:calc(404px/4 - 2px);
+   min-height:calc(250px/4 - 4px);
    width: clac(100% -1px);
    color: white;
-   font-size: 40px;
+   font-size: 30px;
    margin-left: 1px;
    margin-bottom: 2px;
    background-color: black;
-   padding-top: 30px;
+   padding-top: 15px;
 }
 
 .sidebar .whatsound .property:hover{
@@ -415,7 +412,7 @@ body {
 /*footer */
 
 .footer{
-	min-height: 100px;
+	min-height: 70px;
 	background-color: black;
 	width:100%;
 	float: left;
@@ -423,7 +420,6 @@ body {
 	color:#ffffff;
 	padding: 15px;
 }
-
 
 /*
 .top > div {
