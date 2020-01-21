@@ -165,9 +165,19 @@ function exchange() {
 
   var a= document.getElementById("idhomepoint").innerHTML;
   var b= document.getElementById("idawaypoint").innerHTML;
+  var awayBeforeColor = document.getElementById("idawayteamcolor" ).style.backgroundColor;
+  var homeBeforeColor = document.getElementById("idhometeamcolor" ).style.backgroundColor;
+  var awayBeforeName = document.getElementById("idawayteamname").innerHTML;
+  var homeBeforeName = document.getElementById("idhometeamname").innerHTML;
 
   document.getElementById("idhomepoint").innerHTML  = b;
   document.getElementById("idawaypoint").innerHTML  = a;
+
+  document.getElementById("idhometeamcolor" ).style.backgroundColor = awayBeforeColor;
+  document.getElementById("idawayteamcolor" ).style.backgroundColor = homeBeforeColor;
+
+  document.getElementById("idawayteamname").innerHTML = homeBeforeName;
+  document.getElementById("idhometeamname").innerHTML = awayBeforeName;
 }
 
 /* timer min 증가 +1  */

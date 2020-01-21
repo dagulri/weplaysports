@@ -1,13 +1,5 @@
 /* 포인트 완성 하기 -> away bar 완성하기 */
 
-@media only screen and (orientation:landscape){
-  body {
-    height: 100vw;
-    transform: rotate(0deg);
-  }
-}
-
-
 div{
   box-sizing: border-box
 }
@@ -30,7 +22,6 @@ body {
     margin-bottom:4px;
     text-align: center;
 }
-
 
 .logo{
     min-height: 10px;
@@ -507,5 +498,146 @@ button {
 }
 .shot-clock .sec {
     font-size: 60px;
+}
+*/
+
+
+@media only screen and (max-width: 400px) {
+      body {
+        margin: 0px;
+        padding: 0px;
+        height: 100%;
+        background: #6a7069;
+        font-family: 'Odibee Sans', cursive;
+        /* font-size: 50px; */
+      }
+
+    .logo {
+        min-height: 10px;
+        background-color: #000000;
+        width: calc(100% - 2px); */
+        font-size: 30px;
+        color: white;
+        /* float: left; */
+        text-align: center;
+        margin-right: 2px;
+        margin-bottom: 2px;
+        /* line-height: 80px; */
+    }
+
+    .timer {
+        min-height: 5%;
+        background-color: #000000;
+        width: calc(100% - 2px); */
+        margin-right: 2px;
+        margin-bottom: 2px;
+        font-size: 50px; */
+        color: white;
+        /* float: left; */
+        text-align: center;
+    }
+
+    .timer i {
+        padding-top: 0px;
+        vertical-align: middle;
+        font-size: 25px;
+    }
+
+    .set {
+        min-height: 0px;
+    }
+
+    .set a {
+    display: none;
+}
+
+    .sidebar {
+        width: 100%;
+        /* float: left; */
+    }
+
+    .main-content .homebar {
+        width: calc(100% - 2px);
+        float: left;
+        text-align: center;
+        color: #ffffff;
+        margin-right: 2px;
+        position: relative;
+        float: left;
+    }
+    .main-content .awaybar {
+        width: calc(100% - 2px);
+        float: left;
+        text-align: center;
+        color: #ffffff;
+        margin-right: 2px;
+        position: relative;
+        float: left;
+    }
+
+    .main-content .setbar {
+        width: calc(100% - 2px);
+        float: left;
+        margin-right: 2px;
+        display: flex;
+        background-color: black;
+        text-align: center;
+        margin-bottom: 2px;
+        padding-top: 0px;
+        padding-bottom: 5px;
+        min-height: 0px;
+    }
+    .setbar a {
+        display: inline;
+        /* text-align: center; */
+        min-height: 0px;
+        transition: all 0.3s ease;
+        /* width: 100%; */
+        padding-top: 10px;
+        color: white;
+        font-size: 30px;
+        margin-bottom: 0x; */
+        padding-top: 5px;
+    }
+
+    .sidebar .whatsound {
+        width: 80%;
+        float: left;
+        text-align: center;
+        /* font-size: 50px; */
+        display: flex;
+        min-height: 55;
+    }
+
+    .sidebar .whatsound .property {
+        /* text-align: center; */
+        /* min-height: calc(100%); */
+        width: calc(100%/2);
+        color: white;
+        font-size: 30px;
+        margin-left: 1px;
+        /* margin-bottom: 1px; */
+        background-color: black;
+        padding-top: 10px;
+    }
+
+    .sidebar .icon {
+        min-height: 59px;
+        width: 20%;
+        float: left;
+        background-color: black;
+        text-align: center;
+        font-size: 25px;
+        padding-top: 15px;
+        margin-bottom: 1px;
+    }
+}
+
+/*
+@media only screen and (orientation:landscape){
+  body {
+    height: 100vw;
+    transform: rotate(0deg);
+  }
 }
 */
