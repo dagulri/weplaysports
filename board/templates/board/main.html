@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="{% static "css/main.css" %}">
-    <!--<script src="{% static "js/main.js" %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+    <script src="{% static "js/main.js" %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Odibee+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
@@ -16,72 +16,67 @@
 </head>
 
 <div id="title" >
-  <svg width="480" height="300">
-    <pattern id="waveform" patternUnits="userSpaceOnUse" width="440" height="500" x="0" y="0">
-      <image xlink:href="https://media.giphy.com/media/pp6KaeNp7cwuc/giphy.gif" width="500" height="300" />
+  <svg width="100%" height="150">
+    <pattern id="waveform" patternUnits="userSpaceOnUse" width="400px" height="50px" x="0" y="0">
+      <image xlink:href="https://media.giphy.com/media/pp6KaeNp7cwuc/giphy.gif">
     </pattern>
 
-    <text text-anchor="middle" x="50%" y="20%" dy=".35em" class="text">
+    <text text-anchor="middle" x="50%" y="50%" dy=".35em" class="text">
       We play Sports
     </text>
 
   </svg>
-</div>
 
-<div class="grid-layout">
+  <ul class="card-list">
 
+	<li class="card">
+		<a class="card-image" href="{% url 'board:space1' %}" data-image-full= "{% static "media/basketball.png" %}">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg" alt="Psychopomp" />
+		</a>
+		<a class="card-description" href="{% url 'board:space1' %}" target="_blank">
+			<h2>Basketball</h2>
+		</a>
+	</li>
 
-    <div class="grid-space grid-space-1"><a href="{% url 'board:space1' %}">space 1</a></div>
-    <div class="grid-space grid-space-2"><a href="{% url 'board:space1' %}">space 2</a></div>
-    <div class="grid-space span-2 grid-space-3"><a href="{% url 'board:space1' %}">space 3</a></div>
-    <div class="grid-space grid-space-4"><a href="{% url 'board:space1' %}">space 4</a></div>
-    <div class="grid-space span-2 grid-space-5"><a href="{% url 'board:space1' %}">space 5</a></div>
-    <div class="grid-space grid-space-6"><a href="{% url 'board:space1' %}">space 6</a></div>
-    <div class="grid-space grid-space-7"><a href="{% url 'board:space1' %}">space 7</a></div>
-    <div class="grid-space grid-space-8"><a href="{% url 'board:space1' %}">space 8</a></div>
-    <div class="grid-space grid-space-9"><a href="{% url 'board:space1' %}">space 9</a></div>
-    <div class="grid-space span-2 grid-space-10"><a href="{% url 'board:space1' %}">space 10</a></div>
-    <div class="grid-space grid-space-11">space 11</div>
-    <div class="grid-space grid-space-12">space 12</div>
-    <div class="grid-space span-2 grid-space-13">space 13</div>
-    <div class="grid-space grid-space-14">space 14</div>
-    <div class="grid-space grid-space-15">space 15</div>
-    <div class="grid-space grid-space-16">space 16</div>
-    <div class="grid-space span-2 grid-space-17">space 17</div>
-    <div class="grid-space grid-space-18">space 18</div>
-    <div class="grid-space grid-space-19">space 19</div>
-    <div class="grid-space grid-space-20">space 20</div>
-    <div class="grid-space span-2 grid-space-21">space 21</div>
-    <div class="grid-space grid-space-22">space 22</div>
-    <div class="grid-space grid-space-23">space 23</div>
-    <div class="grid-space grid-space-24">space 24</div>
-    <div class="grid-space grid-space-25">space 25</div>
-    <div class="grid-space span-2 grid-space-26">space 26</div>
-    <div class="grid-space grid-space-27">space 27</div>
-    <div class="grid-space grid-space-28">space 28</div>
-    <div class="grid-space grid-space-29">space 29</div>
-    <div class="grid-space grid-space-30">space 30</div>
-    <div class="grid-space grid-space-31">space 31</div>
-    <div class="grid-space grid-space-32">space 32</div>
-    <div class="grid-space grid-space-33">space 33</div>
-    <div class="grid-space grid-space-34">space 34</div>
-    <div class="grid-space grid-space-35">space 35</div>
-    <div class="grid-space grid-space-36">space 36</div>
-    <div class="grid-space grid-space-37">space 37</div>
-    <div class="grid-space grid-space-38">space 38</div>
-    <div class="grid-space grid-space-39">space 39</div>
-    <div class="grid-space span-2 grid-space-40">space 40</div>
-    <div class="grid-space grid-space-41">space 41</div>
-    <div class="grid-space grid-space-42">space 42</div>
-    <div class="grid-space grid-space-43">space 43</div>
-    <div class="grid-space grid-space-44">space 44</div>
-    <div class="grid-space span-2 grid-space-45">space 45</div>
-    <div class="grid-space grid-space-46">space 46</div>
-    <div class="grid-space grid-space-47">space 47</div>
-    <div class="grid-space grid-space-48">space 48</div>
-    <div class="grid-space grid-space-49">space 49</div>
-    <div class="grid-space span-3 grid-space-50">
-      <p>Contact Adim : akasakaro.lee@gmail.com</p>
-    </div>
+    <!--
+      	<li class="card">
+		<a class="card-image" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-500.jpg">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/psychopomp-100.jpg" alt="Psychopomp" />
+		</a>
+		<a class="card-description" href="https://michellezauner.bandcamp.com/album/psychopomp-2" target="_blank">
+			<h2>Psychopomp</h2>
+			<p>Japanese Breakfast</p>
+		</a>
+	</li>
+	-->
 
-</div>
+  <!-- 나중에 추가
+
+	<li class="card">
+		<a class="card-image" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-500.jpg">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
+		</a>
+		<a class="card-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
+			<h2>Comming soon</h2>
+		</a>
+	</li>
+
+	<li class="card">
+		<a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-500.jpg">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg" alt="The Beautiful Game" />
+		</a>
+		<a class="card-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
+			<h2>Comming soon</h2>
+		</a>
+	</li>
+
+	<li class="card">
+		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+		</a>
+		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
+			<h2>Comming soon</h2>
+		</a>
+	</li>
+	-->
+</ul>
